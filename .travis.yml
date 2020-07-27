@@ -32,8 +32,8 @@ install:
     - composer install --prefer-dist --no-progress
     - nvm install 7.10.1
     - npm install
-    - bash vendor/bin/setup-travis-memcached.sh
-    - bash vendor/bin/setup-travis-apc.sh
+    - #bash vendor/bin/setup-travis-memcached.sh
+    - #bash vendor/bin/setup-travis-apc.sh
     - echo '' | pecl install -f amqp-1.8.0
     - echo 'date.timezone = "Europe/London"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - php -m
